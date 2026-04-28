@@ -1,15 +1,8 @@
-// astro.config.mjs
 import { defineConfig } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: 'https://alexavolt.ro',
-
-  // ... other config
-  base: '/playground',
-
-  vite: {
-    plugins: [tailwindcss()]
-  }
+  site: 'https://nume-utilizator.github.io',
+  base: '/playground', // Numele repository-ului tău
+  integrations: [tailwind()],
 });
