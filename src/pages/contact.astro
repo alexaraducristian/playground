@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Contact | AlexaVolt - Solicită o Ofertă Instalații Electrice";
+---
+
+<Layout title={title}>
+  <section class="max-w-5xl mx-auto px-4 py-16">
+    
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        Hai să discutăm despre proiectul tău
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Fie că este vorba de o instalație nouă sau de trecerea la energie verde, echipa AlexaVolt este gata să te ajute.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      
+      <div class="space-y-12">
+        <div>
+          <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 border-b pb-2">
+            🛡️ Siguranță & Profesionalism
+          </h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold">1</span>
+              <div>
+                <strong class="text-gray-900 block">Autorizare ANRE</strong>
+                <p class="text-gray-600 text-sm">Toate lucrările sunt executate conform normativului I7, garantând legalitatea și siguranța.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold">2</span>
+              <div>
+                <strong class="text-gray-900 block">Materiale de Top</strong>
+                <p class="text-gray-600 text-sm">Lucrăm cu branduri precum Schneider Electric, Eaton și Victron pentru durabilitate maximă.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="text-xl font-bold mb-6 text-gray-900">📞 Contact Direct</h3>
+          
+          <div class="space-y-8">
+            <div>
+              <p class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2">Program L-V: 08:00 - 17:30</p>
+              <p class="text-2xl font-black text-slate-800 mb-3">0745 539 432</p>
+              <div class="flex gap-4">
+                <a href="tel:+40745539432" class="flex-1 bg-white border border-slate-300 py-2 rounded-lg text-center font-bold hover:bg-slate-100 transition shadow-sm">Sună</a>
+                <a href="https://wa.me/40745539432" class="flex-1 bg-green-500 text-white py-2 rounded-lg text-center font-bold hover:bg-green-600 transition shadow-sm">WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-200">
+              <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Urgențe / După 17:30</p>
+              <p class="text-xl font-bold text-slate-700 mb-3">0742 069 533</p>
+              <div class="flex gap-4">
+                <a href="tel:+40742069533" class="flex-1 bg-white border border-slate-300 py-2 rounded-lg text-center font-semibold hover:bg-slate-100 transition text-sm">Sună</a>
+                <a href="https://wa.me/40742069533" class="flex-1 bg-green-500 text-white py-2 rounded-lg text-center font-semibold hover:bg-green-600 transition text-sm">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
+        <h2 class="text-2xl font-bold mb-8">Trimite-ne un mesaj</h2>
+        
+        <form action="https://formspree.io/f/meevqgbw" method="POST" class="space-y-5">
+          <input type="hidden" name="_next" value="https://alexavolt.ro/succes">
+          <input type="hidden" name="_cc" value="alexamarius@yahoo.com">
+          <input type="text" name="_gotcha" class="hidden">
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">Nume Complet</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition" placeholder="Ion Popescu">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2">Telefon</label>
+              <input type="tel" name="phone" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition" placeholder="07xx xxx xxx">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Email (Opțional)</label>
+            <input type="email" name="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition" placeholder="exemplu@email.com">
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Serviciul Solicitat</label>
+            <select name="service" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition appearance-none">
+              <option value="tablou">Tablou Electric / Instalații</option>
+              <option value="fotovoltaice">Sisteme Fotovoltaice</option>
+              <option value="mentenanta">Mentenanță / Reparații</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Mesajul tău</label>
+            <textarea name="message" rows="4" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 outline-none transition" placeholder="Spune-ne mai multe despre lucrarea ta..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-200 transition-all active:scale-95">
+            Trimite Cererea de Ofertă
+          </button>
+          
+          <p class="text-[11px] text-gray-400 text-center leading-relaxed">
+            Prin trimiterea acestui formular, datele tale vor fi folosite exclusiv pentru a te contacta în legătură cu oferta solicitată.
+          </p>
+        </form>
+        </div>
+
+    </div>
+  </section>
+</Layout>

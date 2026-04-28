@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Prezentare Tehnică | AlexaVolt - Soluții Energetice de Elită";
+const base = "/playground";
+---
+
+<Layout title={title}>
+  <section class="bg-slate-50 py-20 border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+          Soluții Energetice de Elită: <br/>
+          <span class="text-blue-600">Siguranță & Independență</span>
+        </h1>
+        <p class="text-lg text-slate-600 max-w-3xl mb-8 leading-relaxed">
+          Expertiză certificată <strong>ANRE</strong> pentru proiecte care pun siguranța familiei tale și eficiența tehnologică pe primul loc. Transformăm modul în care locuința ta consumă și produce energie.
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-12 w-full">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center">
+                <span class="text-2xl mb-2">✅</span>
+                <h4 class="font-bold text-slate-800">Conformitate</h4>
+                <p class="text-xs text-slate-500 text-center">Strict conform normativului I7</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center">
+                <span class="text-2xl mb-2">💎</span>
+                <h4 class="font-bold text-slate-800">Premium</h4>
+                <p class="text-xs text-slate-500 text-center">Echipamente Schneider Electric</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center">
+                <span class="text-2xl mb-2">🚀</span>
+                <h4 class="font-bold text-slate-800">Performanță</h4>
+                <p class="text-xs text-slate-500 text-center">Optimizare maximă fotovoltaice</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-slate-900 flex items-center gap-3">
+                <span class="bg-blue-600 text-white p-2 rounded-lg text-sm">⚡</span> 
+                Instalații de Joasă Tensiune
+            </h2>
+            <p class="text-slate-600">
+                Siguranța locuinței tale începe de la o infrastructură electrică proiectată corect. În calitate de electrician autorizat <strong>ANRE</strong>, ofer servicii complete respectând cu strictețe normativul <strong>I7/2011</strong>.
+            </p>
+            
+            <div class="space-y-4 pt-4">
+                <div class="border-l-4 border-blue-600 pl-4">
+                    <h4 class="font-bold text-slate-800">Protecție Diferențială (RCD)</h4>
+                    <p class="text-sm text-slate-500">Indispensabilă pentru prevenirea electrocutării membrilor familiei.</p>
+                </div>
+                <div class="border-l-4 border-blue-600 pl-4">
+                    <h4 class="font-bold text-slate-800">Protecție la Supratensiune (SPD)</h4>
+                    <p class="text-sm text-slate-500">Protejăm electronicele (TV, PC) împotriva fluctuațiilor din rețea.</p>
+                </div>
+            </div>
+
+            <blockquote class="bg-slate-50 p-6 rounded-2xl italic text-slate-700 border border-slate-100">
+                "Energia verde nu este doar o investiție în viitor, ci o decizie inteligentă pentru confortul tău de astăzi."
+            </blockquote>
+        </div>
+
+        <div class="bg-white p-4 rounded-[2.5rem] shadow-2xl border border-slate-100">
+            <img src={`${base}/assets/img/tablou-schneider.jpg`} alt="Instalatie Profesionala Schneider" class="rounded-[2rem] w-full shadow-inner" />
+            <div class="p-6">
+                <p class="text-sm font-bold text-slate-900 mb-1">Standard de Execuție Schneider</p>
+                <p class="text-xs text-slate-400 italic">Calitatea execuției și ordinea în tabloul electric sunt cărțile noastre de vizită.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-900 text-white rounded-[3rem] mx-4 mb-20 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+        <div class="md:order-2">
+            <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                <span class="bg-green-500 text-white p-2 rounded-lg text-sm">☀️</span> 
+                Sisteme Regenerabile
+            </h2>
+            <p class="text-slate-300 mb-8">
+                Independența energetică este o soluție accesibilă astăzi. Oferim soluții "la cheie" optimizate pentru a maximiza rata de autoconsum.
+            </p>
+            
+            <div class="grid gap-6">
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center shrink-0 text-green-400 font-bold">1</div>
+                    <div>
+                        <h4 class="font-bold">Montaj Profesional</h4>
+                        <p class="text-sm text-slate-400">Instalăm pe orice tip de învelitoare, garantând etanșeitatea acoperișului.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center shrink-0 text-green-400 font-bold">2</div>
+                    <div>
+                        <h4 class="font-bold">Monitorizare Smart</h4>
+                        <p class="text-sm text-slate-400">Implementăm aplicații mobile pentru urmărirea producției în timp real.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center shrink-0 text-green-400 font-bold">3</div>
+                    <div>
+                        <h4 class="font-bold">Management Energetic</h4>
+                        <p class="text-sm text-slate-400">Configurăm fluxurile între panouri, baterii și rețea pentru eficiență maximă.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:order-1">
+            <img src={`${base}/assets/img/fotovoltaice.jpeg`} alt="Sistem Fotovoltaic" class="rounded-[2.5rem] w-full h-[500px] object-cover border-8 border-slate-800 shadow-2xl" />
+        </div>
+    </div>
+  </section>
+
+  <section class="py-20 text-center">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-slate-900 mb-6 italic italic">Alege siguranța. Alege AlexaVolt.</h2>
+      <a href={`${base}/contact`} class="inline-block bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-700 shadow-xl shadow-blue-200 transition-all active:scale-95">
+        Solicită o Consultanță Tehnică
+      </a>
+    </div>
+  </section>
+</Layout>

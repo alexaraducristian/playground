@@ -1,0 +1,63 @@
+---
+// Importăm logo-ul pe care l-ai creat
+import Logo from '../components/Logo.astro';
+
+interface Props {
+	title?: string;
+}
+
+const { title = "AlexaVolt | Instalații Electrice" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ro">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="border-b bg-white sticky top-0 z-40">
+			<div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+				<a href="/playground/" class="hover:opacity-90 transition">
+					<Logo />
+				</a>
+
+				<nav class="hidden md:flex gap-6 font-medium">
+					<a href="/playground/" class="hover:text-blue-600">Acasă</a>
+					<a href="/playground/energie-verde" class="hover:text-blue-600">Energie Verde</a>
+					<a href="/playground/portofoliu" class="hover:text-blue-600">Portofoliu</a>
+					<a href="/playground/contact" class="hover:text-blue-600">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="bg-gray-50 border-t mt-20 py-10">
+			<div class="max-w-5xl mx-auto px-4 text-center text-gray-500">
+				<p>&copy; 2026 AlexaVolt. Toate drepturile rezervate.</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	/* Aici ne asigurăm că Tailwind sau stilurile de bază sunt aplicate */
+	:root {
+		--accent: 136, 58, 234;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #ffffff;
+		scroll-behavior: smooth;
+	}
+    /* Stiluri pentru a face textul din markdown să arate bine */
+    main h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+    main h2 { font-size: 1.8rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+    main p { margin-bottom: 1rem; line-height: 1.6; color: #374151; }
+</style>

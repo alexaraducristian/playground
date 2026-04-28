@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Importăm imaginea fizică.
+// Calea trebuie să fie relativă la fișierul Astro în care te afli.
+import fotovoltaice1 from '../assets/portofoliu-fotovoltaice-1.jpg'; 
+import fotovoltaice2 from '../assets/portofoliu-fotovoltaice-2.jpg'; 
+import invetor from '../assets/invertor-app.jpg'; 
+import tablouElectric from '../assets/tablou-electric.jpg';
+import tablouElectric2 from '../assets/portofoliu-tablou-electric-2.jpeg'; 
+import tablouElectric3 from '../assets/portofoliu-tablou-electric-3.jpeg'; 
+import tablouElectric4 from '../assets/portofoliu-tablou-electric-4.jpeg'; 
+import tablouElectric5 from '../assets/portofoliu-tablou-electric-5-plus-invertor.jpeg'; 
+
+const title = "Portofoliu Lucrări | AlexaVolt Iași";
+const base = "/playground"; // Prefixul pentru repo-ul de test
+---
+
+<Layout title={title}>
+  <section class="max-w-5xl mx-auto px-4 py-16">
+    
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+        Proiecte Realizate
+      </h1>
+      <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        Echipa noastră pune accent pe siguranță, eficiență și o execuție tehnică ireproșabilă. 
+        Explorează selecția noastră de lucrări recente în domeniul rezidențial și industrial.
+      </p>
+    </div>
+
+    <div class="space-y-24">
+
+      <article class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">
+            ⚡ Instalații Electrice
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Modernizare Tablou Electric Rezidențial</h2>
+          <p class="text-slate-500 mb-2"><strong>Locație:</strong> Iași</p>
+          <p class="text-slate-600 mb-6 italic">Înlocuirea unui tablou vechi cu siguranțe fuzibile cu o soluție modernă Schneider Electric.</p>
+          
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+            <h3 class="font-bold text-slate-800 mb-3 text-sm uppercase">Detalii Tehnice:</h3>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> Echipare premium <strong>Schneider Acti9/Resi9</strong>.</li>
+              <li class="flex gap-2"><span>•</span> Protecții diferențiale (RCBO) pe circuitele critice.</li>
+              <li class="flex gap-2"><span>•</span> Management de cablu pentru mentenanță ușoară.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="relative group">
+          <Image 
+            src={tablouElectric} 
+            alt="Modernizare Tablou Schneider" 
+            width={480}
+            class="rounded-2xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition" 
+          />
+          <p class="mt-3 text-center text-xs text-slate-400 italic">Vedere detaliată a tabloului echipat profesional.</p>
+        </div>
+      </article>
+
+      <hr class="border-slate-100" />
+
+      <article class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
+        <div class="md:order-2">
+          <div class="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-4">
+            ☀️ Energie Verde
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Sistem Fotovoltaic Hibrid 5.5kW</h2>
+          <p class="text-slate-600 mb-6 italic">Instalare la cheie pentru maximizarea autoconsumului și backup energetic.</p>
+          
+          <div class="overflow-hidden border border-slate-200 rounded-xl mb-6">
+            <table class="w-full text-sm text-left">
+              <thead class="bg-slate-50 text-slate-700 font-bold">
+                <tr>
+                  <th class="px-4 py-2 border-b">Parametru Sistem</th>
+                  <th class="px-4 py-2 border-b text-right">Valoare</th>
+                </tr>
+              </thead>
+              <tbody class="text-slate-600">
+                <tr>
+                  <td class="px-4 py-2 border-b font-medium">Putere PV Instantanee</td>
+                  <td class="px-4 py-2 border-b text-right">~633W</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border-b font-medium text-blue-600">Producție Zilnică</td>
+                  <td class="px-4 py-2 border-b text-right font-bold">9.6kWh</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li class="flex gap-2"><span>•</span> Invertor hibrid cu management inteligent.</li>
+            <li class="flex gap-2"><span>•</span> Smart Meter <strong>Eastron</strong> integrat.</li>
+          </ul>
+        </div>
+        <div class="md:order-1">
+           <Image 
+            src={invetor} 
+            alt="Detalii presetupe tablou electric" 
+            width={480}
+            class="rounded-2xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition" 
+          />
+        </div>
+      </article>
+
+      <hr class="border-slate-100" />
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex flex-col h-full">
+          <h2 class="text-xl font-bold text-slate-900 mb-4">3. Sisteme Noark & Schrack</h2>
+          <p class="text-slate-600 text-sm mb-6 flex-grow">Configurații complexe cu Smart Power Sensor trifazat și protecții la supratensiune atmosferică.</p>
+          <Image 
+            src={tablouElectric2} 
+            alt="Protectii Noark Schrack" 
+            width={480}
+            class="rounded-2xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition" 
+          />
+        </div>
+        
+        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex flex-col h-full">
+          <h2 class="text-xl font-bold text-slate-900 mb-4">4. Invertor Huawei FusionSolar</h2>
+          <p class="text-slate-600 text-sm mb-6 flex-grow">Implementare sistem hibrid cu design minimalist, răcire pasivă și tablouri de protecție DC/AC separate.</p>
+          <Image 
+            src={tablouElectric5} 
+            alt="Invertor Huawei" 
+            width={480}
+            class="rounded-2xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition" 
+          />
+        </div>
+      </div>
+
+      <hr class="border-slate-100" />
+
+      <div class="bg-slate-900 text-white rounded-[2.5rem] p-10 md:p-16">
+        <h2 class="text-3xl font-bold mb-8 text-center italic">Calitatea stă în detalii</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-blue-400 font-bold mb-2">Conexiuni Sigure</h3>
+            <p class="text-sm text-slate-300">Utilizăm reglete de distribuție și terminale sertizate pentru a elimina riscul arcurilor electrice.</p>
+          </div>
+          <div>
+            <h3 class="text-blue-400 font-bold mb-2">Etanșeitate IP65</h3>
+            <p class="text-sm text-slate-300">Cablurile intră în tablouri prin presetupe etanșe, protejând componentele de praf și umiditate.</p>
+          </div>
+          <div>
+            <h3 class="text-blue-400 font-bold mb-2">Separare Galvanică</h3>
+            <p class="text-sm text-slate-300">Separăm fizic traseele DC (panouri) de cele AC (rețea) pentru o siguranță maximă la intervenție.</p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4 mt-12">
+          <Image 
+            src={tablouElectric4} 
+            alt="Vedere interioară" 
+            width={480}
+            class="rounded-2xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition" 
+          />
+          <Image 
+            src={tablouElectric3} 
+            alt="Detalii presetupe tablou electric" 
+            width={480}
+            class="rounded-2xl h-48 w-full object-cover opacity-80 hover:opacity-100 transition" 
+          />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-24 text-center">
+      <h2 class="text-2xl font-bold mb-6 italic">Vrei un proiect similar pentru casa ta?</h2>
+      <a href={`${base}/contact`} class="inline-block bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 shadow-xl shadow-blue-200 transition transform active:scale-95">
+        Solicită o Evaluare Gratuită
+      </a>
+    </div>
+
+  </section>
+</Layout>
