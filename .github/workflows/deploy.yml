@@ -1,8 +1,9 @@
-name: Deploy Astro site to Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main] # sau master, depinde cum se numește branch-ul tău principal
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,17 +19,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
           cache: 'npm'
       - name: Install dependencies
-        run: npm install
-             npm install @astrojs/tailwind tailwindcss
+        run: npm install --legacy-peer-deps
       - name: Build Astro
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Astro scoate site-ul final în folderul dist
+          path: ./dist
 
   deploy:
     needs: build
